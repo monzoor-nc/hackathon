@@ -8,17 +8,17 @@
     <script src="https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
     <script src="app.js"></script>
 </head>
-<body ng-controller="SampleCtrl">
-<!-- anything typed in here is magically saved to Firebase! -->
-<input type="text" ng-model="data.text"/>
-<!-- all changes from Firebase magically appear here! -->
-x:<input type="text" ng-model="marker.x"/>
-y:<input type="text" ng-model="marker.y"/>
-desc:<input type="text" ng-model="marker.desc"/>
-user:<input type="text" ng-model="marker.user"/>
-<!--marker:<input type="text" ng-model="data.marker"/>-->
-<input type="button" value="Add Marker" ng-click="addMarker()"/>
 
-<h1>You said: {{ data.text }}, id:{{id}}, url:{{url}}</h1>
+</head>
+<body>
+<div class="homepage">
+<input type="text" class="dropboxurl">
+<div class="button">Get started</div>
+</div>
+<div id="designpage">
+	<!-- this one is the design page -->
+	<img src="" class="clientimage">
+	<script src="interact.js"></script>
+</div>
 </body>
 </html>
