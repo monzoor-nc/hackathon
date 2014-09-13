@@ -1,0 +1,37 @@
+$Lato-light: "Lato", Helvetica, Arial, sans-serif;
+$Lato-regular: "Lato", Helvetica, Arial, sans-serif;
+$Lato-bold: "Lato", Helvetica, Arial, sans-serif;
+$Lato-bolder: "Lato", Helvetica, Arial, sans-serif;
+
+@mixin font($type){
+  //Lato
+  @if $type == Lato-light{
+  	font-family: $Lato-light;
+    font-weight: 100;
+    font-style: normal;
+  }
+    
+@if $type == Lato-regular{
+  	font-family: $Lato-regular;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+    
+  @if $type == Lato-bold{
+  	font-family: $Lato-bold;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @if $type == Lato-bolder{
+  	font-family: $Lato-bolder;
+    font-weight: 900;
+    font-style: normal;
+  }
+    
+  
+}
+    
+
+
