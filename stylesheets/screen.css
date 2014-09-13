@@ -70,24 +70,12 @@ body {
   background-color: #674172;
   font-family: "Lato", Helvetica, Arial, sans-serif;
   background-image: url("../asset/img/bg.png");
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: fixed;
   background-size: cover;
-  margin: 0;
   padding: 0;
   font-family: "Lato", Helvetica, Arial, sans-serif;
-}
-
-.clearfix:after, header:after, .content:after {
-  clear: both;
-}
-
-.clearfix:before, header:before, .content:before, .clearfix:after, header:after, .content:after {
-  content: "";
-  display: table;
-}
-
-.clearfix, header, .content {
-  *zoom: 1;
+  margin: 90px 0 0 0;
 }
 
 img {
@@ -141,14 +129,6 @@ input[type="text"] {
   padding: 5px;
 }
 
-input[type="text"]::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  color: #b2b1b1;
-  font-style: normal;
-  font-weight: 100;
-  font-size: 30px;
-}
-
 .submit {
   padding: 20px;
   color: #ffffff;
@@ -160,9 +140,25 @@ textarea::-webkit-input-placeholder {
   cursor: pointer;
 }
 
+.clearfix:after, header:after {
+  clear: both;
+}
+
+.clearfix:before, header:before, .clearfix:after, header:after {
+  content: "";
+  display: table;
+}
+
+.clearfix, header {
+  *zoom: 1;
+}
+
 header {
   width: 100%;
   height: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 header .logo {
   float: right;
@@ -171,6 +167,15 @@ header .logo {
 header .logo img {
   width: 200px;
   height: auto;
+}
+header .done {
+  border: 1px solid white;
+  padding: 10px;
+  color: white;
+  width: auto;
+  float: left;
+  margin: 20px 40px;
+  display: none;
 }
 
 .content {
@@ -190,10 +195,41 @@ header .logo img {
   text-align: center;
   font-family: 'IconFont-social';
 }
+.content .url-holder input[type="text"]::-webkit-input-placeholder,
+.content .url-holder textarea::-webkit-input-placeholder {
+  color: #b2b1b1;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 30px;
+}
 .content input[type="text"] {
   font-size: 36px;
   text-align: center;
   font-family: 'IconFont-social';
+  color: #636465;
+  width: 89%;
+  float: left;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.content input[type="text"]:focus {
+  outline: 0;
+}
+.content input[type="text"]:focus + .submit-but {
+  background-image: url("../asset/img/btn_start_green.png");
+}
+.content .submit-but {
+  background-image: url("../asset/img/btn_start_gray.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffffff;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  float: left;
+  width: 56px;
+  height: 55px;
+  margin: 30px 0px 8px -4px;
+  background-size: cover;
 }
 .content h1 {
   font-weight: 400;
@@ -204,5 +240,110 @@ header .logo img {
 .content h2 {
   font-weight: 100;
   line-height: 1.3;
+  font-size: 40px;
   font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+.dl-button {
+  border-width: 2px;
+  border-radius: 5px;
+  border-style: solid;
+  width: 100px;
+  height: 35px;
+  line-height: 35px;
+  color: white;
+  padding: 10px;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.red {
+  border-color: red;
+}
+
+.green {
+  border-color: green;
+}
+
+.blue {
+  border-color: dodgerblue;
+}
+
+.gray {
+  border-color: slategray;
+}
+
+.black {
+  border-color: darkslategrey;
+}
+
+.white {
+  border-color: white;
+}
+
+.dl-button-start {
+  width: 44px;
+  height: 44px;
+}
+
+.marker {
+  width: 20px;
+  height: 20px;
+  background: red;
+  position: absolute;
+  z-index: 1000;
+  border-radius: 50%;
+  box-shadow: 1px 1px gray;
+}
+
+.markerdetail {
+  position: absolute;
+  width: 250px;
+  height: 120px;
+  padding: 7px 5px 5px 7px;
+  display: none;
+  background: #FFFFFF;
+  background-image: url("../asset/img/input-text-mark.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  z-index: 2000;
+  border: 0;
+  height: 55px;
+  color: #674172;
+  font-family: 'Lato';
+  font-size: 17px;
+  border: 1px solid #674172;
+}
+
+.markerdetail:focus {
+  outline: -webkit-focus-ring-color auto 0px;
+}
+
+input .markerdetail {
+  outline: 0;
+}
+
+.arrow_box {
+  position: absolute;
+  background: red;
+  border: 1px solid red;
+}
+
+.arrow_box:after {
+  right: 100%;
+  top: 50%;
+  border: 1px solid red;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(100, 100, 100, 0);
+  border-right-color: #ffffff;
+  border-width: 10px;
+  margin-top: -10px;
 }
