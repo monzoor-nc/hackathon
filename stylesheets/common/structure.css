@@ -53,51 +53,91 @@ header .done {
   text-align: center;
   font-family: 'IconFont-social';
 }
-.content .url-holder input[type="text"]::-webkit-input-placeholder,
-.content .url-holder textarea::-webkit-input-placeholder {
-  color: #b2b1b1;
-  font-style: normal;
-  font-weight: 100;
-  font-size: 30px;
-}
-.content input[type="text"] {
-  font-size: 36px;
-  text-align: center;
-  font-family: 'IconFont-social';
-  color: #636465;
-  width: 89%;
-  float: left;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-.content input[type="text"]:focus {
-  outline: 0;
-}
-.content input[type="text"]:focus + .submit-but {
-  background-image: url("../asset/img/btn_start_green.png");
-}
-.content .submit-but {
-  background-image: url("../asset/img/btn_start_gray.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #ffffff;
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
-  float: left;
-  width: 56px;
-  height: 55px;
-  margin: 30px 0px 8px -4px;
-  background-size: cover;
-}
 .content h1 {
   font-weight: 400;
-  font-size: 65px;
+  font-size: 60px;
   line-height: 1.2;
   font-family: "Lato", Helvetica, Arial, sans-serif;
 }
 .content h2 {
   font-weight: 100;
   line-height: 1.3;
-  font-size: 40px;
+  font-size: 35px;
   font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+.form {
+  width: 85%;
+  margin: 50px auto;
+  position: relative;
+  background: rgba(50, 50, 50, 0.2);
+  border: 0px solid #dbdbdb;
+}
+
+.url-box {
+  display: inline-block;
+  position: relative;
+}
+
+.input-text {
+  background: transparent;
+  border: none;
+  padding: 8px 15px;
+  font-family: "Lato",serif,IconFont-social;
+  font-size: 28px;
+  font-weight: 100;
+  color: #fafafa;
+  position: relative;
+}
+
+input[type="text"]:focus {
+  outline: 0;
+  border: 0;
+}
+
+.submit-button {
+  position: relative;
+  padding: 6px 15px;
+  left: 2px;
+  border: 2px solid #26C281;
+  background-color: #26C281;
+  color: #fafafa;
+  font-family: "Lato";
+  font-weight: 100;
+  font-size: 28px;
+}
+
+.submit-button:hover {
+  background-color: #049372;
+  border-color: #049372;
+}
+
+.help-icon {
+  border: 1px solid transparent;
+  background-color: transparent;
+  display: inline-block;
+  vertical-align: middle;
+  outline: 0;
+  cursor: pointer;
+}
+
+.help-icon:after {
+  content: "?";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  margin: auto;
+  padding: 2px;
+  border-radius: 50%;
+  text-align: center;
+  color: #674172;
+  font-weight: normal;
+  font-size: 20px;
+  cursor: pointer;
 }

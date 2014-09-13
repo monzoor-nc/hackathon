@@ -1,17 +1,17 @@
 <html ng-app="sampleApp">
 <head>
 	<title>Design.ly</title>
-  <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <link href='http://fonts.googleapis.com/css?family=Lato:100,400,700,900' rel='stylesheet' type='text/css'>
+	<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,400,700,900' rel='stylesheet' type='text/css'>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.19/angular.min.js"></script>
-    <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
-    <script src="https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
-    <script src="app.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.19/angular.min.js"></script>
+	<script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
+	<script src="app.js"></script>
 
 
 
-<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
 
 
 </head>
@@ -27,12 +27,20 @@
 	<div class="content">
 		<div class="url-holder">
 			<div class="homepage">
-				<h1>Got some design?</h1>
-				<h2>Why not talk about it</h2>
+				<h1>Designed something?</h1>
+				<h2>Why not share and see what others think</h2>
 				<div class="input-parent">
 					<div class="input-holder">
-						<input type="text" class="dropboxurl" placeholder=' &#62256; Url to your DropBox design'>
-						<div class="button submit-but"></div>
+						<div class="form">
+							<div class="url-box">
+								<input type="text" class="input-text" placeholder="&#62256; url to file(e.g.png,jpg)" required>
+								<button class="help-icon" onclick="alert("You must have a DropBox account where you uploaded your design.And the designs shared link should be entered here.")"></button>
+							</div>
+
+							<!-- button class is for js,never remove it -->
+							<input type="button" class="button submit-button" value="Let's see!">
+						</div>
+						
 					</div>
 				</div>
 				
@@ -42,13 +50,13 @@
 			<!-- this one is the design page -->
 			<img src="" class="clientimage">
 			<script src="interact.js"></script>
-			</div>
-			<textarea class="markerdetail" placeholder="enter your details here"></textarea>
+		</div>
+		<textarea class="markerdetail" placeholder="enter your details here"></textarea>
 
-			
+
 	</div>
 
 
-<script type="text/javascript" src='interact.js'></script>
+	<script type="text/javascript" src='interact.js'></script>
 </body>
 </html>
