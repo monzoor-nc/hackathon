@@ -4,6 +4,25 @@
   <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <link href='http://fonts.googleapis.com/css?family=Lato:100,400,700,900' rel='stylesheet' type='text/css'>
 <script src="bower_components/jquery/dist/jquery.js"></script>
+<style>
+	.marker{
+		width:20px;
+		height:20px;
+		background:red;
+		position:absolute;
+		z-index:1000;
+		border-radius:50%;
+	}
+	.markerdetail{
+		width:200px;
+		height:150px;
+		background:red;
+		padding:5px;
+		display:none;
+		z-index:2000;
+		position:absolute;
+	}
+</style>
 </head>
 <body>
 <div class="homepage">
@@ -15,5 +34,6 @@
 	<img src="" class="clientimage">
 	<script src="interact.js"></script>
 </div>
+<textarea class="markerdetail" placeholder="enter your details here"></textarea>
 </body>
 </html>
