@@ -14,6 +14,10 @@ if(thehash=window.location.hash){
 	// 	renderMarker(marker);
 	// }
 }
+$('.dropboxurl').keydown(function(e){
+	if(e.keyCode==13)
+		$('.button').click();
+});
 function refreshMarker(x,y){
 	var allmarkers = document.querySelectorAll('.marker');
 }
@@ -58,7 +62,7 @@ var renderMarker = function(markerobj){
 var showDetailWindow = function(el){
 		//console.log(el);
 		$('.markerdetail').val(el.getAttribute('data-detail'));
-		realmdel.style.top=el.style.top; // need wotk on positioniong
+		realmdel.style.top=parseInt(el.style.top_-90; // need wotk on positioniong
 		realmdel.style.left=parseInt(el.style.left)+25;
 		current=el;
 		$('.markerdetail').show().get(0).focus();
@@ -81,7 +85,7 @@ var img = $('.clientimage');
 if(dropbox = $('.dropboxurl').val()){
 	dropbox = dropbox.slice(0,dropbox.length-1)+"1";
 	$('.homepage').hide();
-	$('.url-holder').hide();
+	$('.url-holder').css('display','none');
 	img.attr('src',dropbox);
 }
 //$('.homepage').hide();
