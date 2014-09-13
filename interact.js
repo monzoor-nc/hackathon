@@ -1,7 +1,27 @@
 (function(){
-	var colors = "#4c89c5,#50aa0e,#BE90D4,#87D37C,#EB9532,#BF55EC".split(',');
-	console.log(colors);
+var colors = "#4c89c5,#50aa0e,#BE90D4,#87D37C,#EB9532,#BF55EC".split(',');
+// console.log(colors);
+function lookForChange(){
+	console.log('looking for change');	
+}
+
+if(thehash=window.location.hash){
+	//if that's an existing document
+	// thehash=thehash.slice(1,thehash.length);
+	// var doc = getDocument(thehash);
+	// var hashes = doc.markers;
+	// for(marker in markers){
+	// 	renderMarker(marker);
+	// }
+}
+function refreshMarker(x,y){
+	var allmarkers = document.querySelectorAll('.marker');
+}
+function updateMarkers(){
+	var allmarkers = document.querySelectorAll('.marker');
+}
 $('.button').click(function(){
+var lfchange = setInterval(lookForChange,5000);
 var realmdel= $('.markerdetail').get(0);
 var dropbox;
 var current=null;
@@ -10,6 +30,7 @@ var addMarker = function(x,y){
 	marker.className="marker";
 	marker.style.left=x-10; //assuming a 10x10 marker
 	marker.style.top=y-10;
+	marker.id="mrk"+document.querySelectorAll('.marker').length;
 	marker.style.backgroundColor=colors[Math.ceil(Math.random()*5)];
 	$(marker).attr('data-detail','');
 	document.querySelector('body').appendChild(marker);
@@ -19,6 +40,21 @@ var addMarker = function(x,y){
 		showDetailWindow(this);
 	})
 }
+var renderMarker = function(markerobj){
+	var marker = document.createElement('div');
+	marker.className="marker";
+	marker.style.left=markerobj.x; //assuming a 10x10 marker
+	marker.style.top=markerobj.y;
+	marker.id=markerobj.id;
+	marker.style.backgroundColor=markerobj.color;
+	$(marker).attr('data-detail',markerobj.details);
+	document.querySelector('body').appendChild(marker);
+	
+	marker.addEventListener('click',function(){
+		//alert('yo');
+		showDetailWindow(this);
+	})
+};
 var showDetailWindow = function(el){
 		//console.log(el);
 		$('.markerdetail').val(el.getAttribute('data-detail'));
@@ -45,6 +81,7 @@ var img = $('.clientimage');
 if(dropbox = $('.dropboxurl').val()){
 	dropbox = dropbox.slice(0,dropbox.length-1)+"1";
 	$('.homepage').hide();
+	$('.url-holder').hide();
 	img.attr('src',dropbox);
 }
 //$('.homepage').hide();
@@ -57,7 +94,7 @@ if(dropbox = $('.dropboxurl').val()){
 	});
 });
 document.addEventListener('keydown',function(e){
-	if(e.keyCode==27){
+	if(e.keyCode==27 || e.keyCode==13){
 		document.querySelector('.markerdetail').blur();
 	}
 });
