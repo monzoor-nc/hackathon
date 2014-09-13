@@ -1,0 +1,17 @@
+{
+  "name": "design.ly",
+  "version": "1.0.0",
+  "homepage": "https://github.com/monzoor-nc/hackathon",
+  "authors": [
+    "Anam Ahmed",
+    "Mumin Dibosh",
+    "Monzoor tamal"
+  ],
+  "description": "Design annotation service",
+  "main": "index.html",
+  "keywords": [
+    "design",
+    "annotate"
+  ],
+  "license": "GPL"
+}

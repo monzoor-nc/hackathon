@@ -1,27 +1,39 @@
-/**
- *
- * Created by adib on 9/13/14.
- */
-var app = angular.module("sampleApp", ["firebase"]);
-app.controller("SampleCtrl", function($scope, $firebase) {
-    var ref = new Firebase("https://designly.firebaseio.com/designly");
-    var sync = $firebase(ref);
 
-    var markers = [];
-    // download the data into a local object
-    var syncObject = sync.$asObject();
-    // synchronize the object with a three-way data binding
-    // click on `index.html` above to see it used in the DOM!
-    syncObject.$bindTo($scope, "data");
+var ref = new Firebase("https://designly.firebaseio.com/doc");
 
-    $scope.addMarker = function(){
-        //$scope.data.markers.push($scope.marker);
-        //$scope.data.markers.push($scope.marker);
-        var markers = $scope.data.markers || [];
 
-        markers.push($scope.marker);
-        $scope.data.markers = markers;
+function testing(){
+    var url = "www.nesting.com";
+    //var doc = newDoc(url);
 
-        console.log($scope.data.markers);
+    var marker = {
+        x:22,
+        y:32,
+        description:"awesome description",
+        user:"user 5"
     }
-});
+    //doc.add(marker);
+    var query = fetchDoc("-JWiYJgmdv46V64XEU7W");
+
+    console.log("fetced doc", query);
+}
+
+function newDoc(url){
+   var input = {url:url,markers:[]}
+   var data = ref.push(input);
+
+   return {
+       add:function(marker){
+            var docFirebaseUrl = ref.child(data.name() + "/markers");
+            return docFirebaseUrl.push(marker);
+        }
+    }
+}
+
+function fetchDoc(docId){
+    var data =  ref.child(docId).once('value',function(snap){
+        console.log("snap is ",snap.val());
+        return snap;
+    });
+    return data;
+}
