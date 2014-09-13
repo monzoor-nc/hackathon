@@ -19,18 +19,20 @@ var addMarker = function(x,y){
 var showDetailWindow = function(el){
 		//console.log(el);
 		$('.markerdetail').val(el.getAttribute('data-detail'));
-		$('.markerdetail').show().get(0).focus();
 		realmdel.style.top=el.style.top; // need wotk on positioniong
 		realmdel.style.left=parseInt(el.style.left)+25;
 		current=el;
+		$('.markerdetail').show().get(0).focus();
 }
 
 $('.markerdetail').get(0).addEventListener('blur',function(){
 	if(!this.value){
 		$('body').get(0).removeChild(current);
 	}
+	else{
 	$(current).attr('data-detail',$(this).val());
 	$(this).hide();
+	}
 	current=null;
 });
 var img = $('.clientimage');
