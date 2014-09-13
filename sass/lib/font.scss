@@ -34,11 +34,12 @@ $Lato-bolder: "Lato", Helvetica, Arial, sans-serif;
 }
     
 
+
 @font-face {
-  font-family: 'IconFont';
-  src: url('../asset/Entypo/entypo.eot'); /* IE9 Compat Modes */
-  src: url('../asset/Entypo/entypo.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../asset/Entypo/entypo.woff') format('woff'), /* Modern Browsers */
-       url('../asset/Entypo/entypo.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../asset/Entypo/entypo.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-family: 'IconFont-social';
+  src: url('../asset/Entypo/entypo-social.eot'); /* IE9 Compat Modes */
+  src: url('../asset/Entypo/entypo-social.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../asset/Entypo/entypo-social.woff') format('woff'), /* Modern Browsers */
+       url('../asset/Entypo/entypo-social.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../asset/Entypo/entypo-social.svg#svgFontName') format('svg'); /* Legacy iOS */
 }

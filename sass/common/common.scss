@@ -1,12 +1,13 @@
+
 body{
-	background-color: $Body-color;
-	@include font(Lato-regular);
-	font-family: 'IconFont';
+	background-color: #674172;
+	font-family: "Lato", Helvetica, Arial, sans-serif;
 	background-image: url("../asset/img/bg.png");
 	background-position: center;
 	background-size: cover;
 	margin: 0;
 	padding: 0;
+	font-family: "Lato", Helvetica, Arial, sans-serif;
 }
 //clearfix
 .clearfix:after{
@@ -29,8 +30,7 @@ li{
 	list-style: none;
 }
 p,h1,h2,h3,h4,h5,h6,span{
-	@extend .clearfix;
-	color: $White;
+	color: #ffffff;
 }
 p{
 	font-size: 13px;
@@ -53,3 +53,40 @@ h5{
 h6{
 	font-size: 14px;
 }
+input[type="text"]{
+	width: 100%;
+	background-color: #ffffff;
+	border-radius: 5px;
+	color: #000000;
+	border: 0;
+	height: 55px;
+	margin: 30px 0;
+	padding: 5px;
+}
+
+input[type="text"]::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder{
+    color:    #b2b1b1;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 30px;
+}
+.submit{
+	padding: 20px;
+	color: #ffffff;
+	background-color: #429a46;
+	width: auto;
+	display: inline-block;
+	border-radius: 5px;
+	font-family: "Lato", Helvetica, Arial, sans-serif;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+

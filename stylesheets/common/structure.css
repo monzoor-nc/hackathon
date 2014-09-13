@@ -17,13 +17,30 @@ header .logo img {
   position: relative;
 }
 .content .url-holder {
-  width: 400px;
+  width: 600px;
   height: 300px;
-  border: 1px solid red;
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
   margin: auto;
+  text-align: center;
+  font-family: 'IconFont-social';
+}
+.content input[type="text"] {
+  font-size: 36px;
+  text-align: center;
+  font-family: 'IconFont-social';
+}
+.content h1 {
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 1.2;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+.content h2 {
+  font-weight: 100;
+  line-height: 1.3;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
 }

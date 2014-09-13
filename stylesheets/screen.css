@@ -2,14 +2,6 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-@font-face {
-  font-family: 'IconFont';
-  src: url("../asset/Entypo/entypo.eot");
-  /* IE9 Compat Modes */
-  src: url("../asset/Entypo/entypo.eot?#iefix") format("embedded-opentype"), url("../asset/Entypo/entypo.woff") format("woff"), url("../asset/Entypo/entypo.ttf") format("truetype"), url("../asset/Entypo/entypo.svg#svgFontName") format("svg");
-  /* Legacy iOS */
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -66,29 +58,35 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+@font-face {
+  font-family: 'IconFont-social';
+  src: url("../asset/Entypo/entypo-social.eot");
+  /* IE9 Compat Modes */
+  src: url("../asset/Entypo/entypo-social.eot?#iefix") format("embedded-opentype"), url("../asset/Entypo/entypo-social.woff") format("woff"), url("../asset/Entypo/entypo-social.ttf") format("truetype"), url("../asset/Entypo/entypo-social.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+}
+
 body {
   background-color: #674172;
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-family: 'IconFont';
   background-image: url("../asset/img/bg.png");
   background-position: center;
   background-size: cover;
   margin: 0;
   padding: 0;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
 }
 
-.clearfix:after, p:after, h1:after, h2:after, h3:after, h4:after, h5:after, h6:after, span:after, header:after, .content:after {
+.clearfix:after, header:after, .content:after {
   clear: both;
 }
 
-.clearfix:before, p:before, h1:before, h2:before, h3:before, h4:before, h5:before, h6:before, span:before, header:before, .content:before, .clearfix:after, p:after, h1:after, h2:after, h3:after, h4:after, h5:after, h6:after, span:after, header:after, .content:after {
+.clearfix:before, header:before, .content:before, .clearfix:after, header:after, .content:after {
   content: "";
   display: table;
 }
 
-.clearfix, p, h1, h2, h3, h4, h5, h6, span, header, .content {
+.clearfix, header, .content {
   *zoom: 1;
 }
 
@@ -101,7 +99,7 @@ li {
 }
 
 p, h1, h2, h3, h4, h5, h6, span {
-  color: white;
+  color: #ffffff;
 }
 
 p {
@@ -132,6 +130,36 @@ h6 {
   font-size: 14px;
 }
 
+input[type="text"] {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #000000;
+  border: 0;
+  height: 55px;
+  margin: 30px 0;
+  padding: 5px;
+}
+
+input[type="text"]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #b2b1b1;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.submit {
+  padding: 20px;
+  color: #ffffff;
+  background-color: #429a46;
+  width: auto;
+  display: inline-block;
+  border-radius: 5px;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  cursor: pointer;
+}
+
 header {
   width: 100%;
   height: auto;
@@ -151,13 +179,30 @@ header .logo img {
   position: relative;
 }
 .content .url-holder {
-  width: 400px;
+  width: 600px;
   height: 300px;
-  border: 1px solid red;
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
   margin: auto;
+  text-align: center;
+  font-family: 'IconFont-social';
+}
+.content input[type="text"] {
+  font-size: 36px;
+  text-align: center;
+  font-family: 'IconFont-social';
+}
+.content h1 {
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 1.2;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+.content h2 {
+  font-weight: 100;
+  line-height: 1.3;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
 }
