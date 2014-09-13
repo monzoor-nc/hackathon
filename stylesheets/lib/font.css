@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'IconFont';
+  src: url("../asset/Entypo/entypo.eot");
+  /* IE9 Compat Modes */
+  src: url("../asset/Entypo/entypo.eot?#iefix") format("embedded-opentype"), url("../asset/Entypo/entypo.woff") format("woff"), url("../asset/Entypo/entypo.ttf") format("truetype"), url("../asset/Entypo/entypo.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+}

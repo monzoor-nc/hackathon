@@ -1,8 +1,9 @@
 body{
-	background-color: red;
+	background-color: $body-color;
+	@include font(Lato-regular);
+	font-family: 'IconFont';
 }
 @mixin clearfix {
-  display: inline-block;
   &:after {
     content: ".";
     display: block;
@@ -10,11 +11,35 @@ body{
     clear: both;
     visibility: hidden;
   }
-  * html & { height: 1px }
 }
-
-p{
+img{
+	border: 0;
+}
+li{
+	list-style: none;
+}
+p,h1,h2,h3,h4,h5,h6,span{
 	@include clearfix;
-	@include font(Lato-light);
-	font-size: 30px;
+	color: $White;
+}
+p{
+	font-size: 13px;
+}
+h1{
+	font-size: 33px;
+}
+h2{
+	font-size: 27px;
+}
+h3{
+	font-size: 22px;
+}
+h4{
+	font-size: 18px;
+}
+h5{
+	font-size: 16px
+}
+h6{
+	font-size: 14px;
 }
