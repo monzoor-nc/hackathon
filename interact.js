@@ -62,7 +62,7 @@ var renderMarker = function(markerobj){
 var showDetailWindow = function(el){
 		//console.log(el);
 		$('.markerdetail').val(el.getAttribute('data-detail'));
-		realmdel.style.top=parseInt(el.style.top-90; // need wotk on positioniong
+		realmdel.style.top=parseInt(el.style.top)-90; // need wotk on positioniong
 		realmdel.style.left=parseInt(el.style.left)+25;
 		current=el;
 		$('.markerdetail').show().get(0).focus();
