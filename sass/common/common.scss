@@ -1,17 +1,27 @@
 body{
-	background-color: $body-color;
+	background-color: $Body-color;
 	@include font(Lato-regular);
 	font-family: 'IconFont';
+	background-image: url("../asset/img/bg.png");
+	background-position: center;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
 }
-@mixin clearfix {
-  &:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-  }
+//clearfix
+.clearfix:after{
+  clear: both;
 }
+
+.clearfix:before, .clearfix:after{
+  content: "";
+  display: table;
+}
+
+.clearfix{
+  *zoom: 1;
+}
+
 img{
 	border: 0;
 }
@@ -19,7 +29,7 @@ li{
 	list-style: none;
 }
 p,h1,h2,h3,h4,h5,h6,span{
-	@include clearfix;
+	@extend .clearfix;
 	color: $White;
 }
 p{

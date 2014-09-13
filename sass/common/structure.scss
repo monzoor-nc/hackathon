@@ -1,11 +1,33 @@
 header{
-	@include clearfix;
+	@extend .clearfix;
 	width: 100%;
-	height: 200px;
+	height: auto;
+	.logo{
+		float: right;
+		padding: 20px;
+		img{
+			width: 200px;
+			height: auto;
+		}
+	}
 }
 
 .content{
 	width: 100%;
-	height: auto;
-	@include clearfix;
+	height: 80%;
+	@extend .clearfix;
+	position: relative;
+	.url-holder{
+		width: 400px;
+		height: 300px;
+		border: 1px solid red;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
 }
+
+
