@@ -179,9 +179,9 @@ header .done {
   font-family: "Lato", Helvetica, Arial, sans-serif;
 }
 .content h2 {
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1.3;
-  font-size: 35px;
+  font-size: 32px;
   font-family: "Lato", Helvetica, Arial, sans-serif;
 }
 
@@ -196,15 +196,19 @@ header .done {
 .url-box {
   display: inline-block;
   position: relative;
+  width: 79%;
+  display: table-cell;
 }
 
 .input-text {
   background: transparent;
   border: none;
   padding: 8px 15px;
-  font-family: "Lato",serif,IconFont-social;
-  font-size: 28px;
-  font-weight: 100;
+  font-family: "Lato", serif, IconFont-social;
+  font-size: 20px;
+  width: 90%;
+  font-weight: 300;
+  float: left;
   color: #fafafa;
   position: relative;
 }
@@ -217,13 +221,16 @@ input[type="text"]:focus {
 .submit-button {
   position: relative;
   padding: 6px 15px;
-  left: 2px;
+  float: right;
+  width: 25%;
+  left: -2px;
   border: 2px solid #26C281;
   background-color: #26C281;
   color: #fafafa;
   font-family: "Lato";
-  font-weight: 100;
-  font-size: 28px;
+  font-weight: 300;
+  font-size: 20px;
+  top: -44px;
 }
 
 .submit-button:hover {
@@ -259,6 +266,25 @@ input[type="text"]:focus {
   font-weight: normal;
   font-size: 20px;
   cursor: pointer;
+}
+
+.message {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 92%;
+  background: rgba(255, 255, 255, 0.5);
+  color: #000000;
+  font-family: "Lato";
+  font-size: 14px;
+  width: 200px;
+  height: 60px;
+  padding: 10px;
+}
+
+.help-icon:hover + .message {
+  display: block !important;
+  z-index: 10;
 }
 
 .dl-button {
